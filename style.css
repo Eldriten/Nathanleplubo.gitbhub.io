@@ -1,0 +1,520 @@
+/*Eléments communs*/
+*, 
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+}
+
+html{
+ 	scroll-behavior: smooth;	
+}
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 1rem;
+	background-color: black;
+}
+
+nav{
+	position: fixed; 
+	top: 10rem;
+	right: 0;
+}
+
+
+
+h2{
+	padding:2rem 0 2rem 0;
+	text-transform: uppercase;
+	text-align:center;
+	font-size:2rem;
+	color:black;
+	font-family: 'Bitter','Segoe UI',Roboto,Helvetica,Arial,serif;
+}
+
+h4{
+	margin-top:1.5rem;
+	color:orange;
+	font-size:1.2rem;
+	font-weight: bold;
+}
+
+ul{
+	list-style: circle inside; 
+} 
+
+a{
+	color: white;
+	text-decoration: none;
+	transition: all .2s;
+}
+a:hover{
+	color: orange;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* header 
+****************************************/
+.header{
+	background-image: url(fond.gif);
+	background-repeat: no-repeat;
+	background-size: 100rem ;
+
+}
+
+.header-logo-img{
+	width: 25%;
+	display: block;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+
+.connexion-abonnement{
+	justify-content: flex-end;
+	display:flex;
+	padding-top:1rem;
+}
+
+
+.connexion{
+	display:inline-block;
+	margin-right:1rem;
+	border-right: 2px solid white;
+	padding-right:1rem;
+}
+
+.sabonner{
+	border: 0.1rem solid #b400fd;
+	background-color:  #b400fd;
+	display: flex;
+	display:inline-block;
+	margin-right:1rem;
+}
+
+.connexion:before{
+	content:"";
+	background-image: url(connexion.svg);
+	display: inline-block; 
+	width: 2.5rem; 
+	height: 1.1rem; 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: 3rem; 
+}
+
+.text-abo{
+	margin:1rem 0.5rem;
+}
+
+.sabonner:hover{
+	border: 0.1rem solid #8c00c0;
+	background-color:  #8c00c0;
+}
+
+.text-abo:hover{
+	color:white;
+}
+
+/* menue 
+****************************************/
+
+.menu-sticky-item{ 
+list-style: none inside; 
+margin: 0;
+position: relative; 
+height: 3rem;
+}
+
+.menu-sticky-icon{ 
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: 2rem; 
+width: 3rem; 
+height: 3rem; 
+display: inline-block; 
+margin-right: .5rem;  
+}
+
+.menu-sticky-icon-actualite{ 
+background-image: url(actualite2.png); 
+}
+
+.menu-sticky-icon-video{ 
+background-image: url(video.png); 
+}
+
+.menu-sticky-icon-article{ 
+background-image: url(article.png); 
+}
+
+.menu-sticky-link{
+border-top-left-radius: 10px; 
+border-bottom-left-radius: 10px; 
+background-image: url(fond.gif); 
+display: flex; 
+align-items: center; 
+width: 10rem; 
+position: absolute;  top: 0; left: -3rem; 
+} 
+
+.menu-sticky-link:hover{ 
+color: #fff; 
+left: -10rem; 
+} 
+
+.menu-sticky-link:hover .menu-sticky-icon{ 
+}
+
+/*contenue
+************************************/
+.main-container{
+	display:flex;
+	max-width: 75rem;
+	width: 100%;
+	margin: 0 auto;
+	flex-wrap: nowrap;
+	background-color:#f2f2f2;
+
+}
+
+.contenue{
+	display:flex;
+	flex-basis:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/*ACTUALITE
+***********************************/
+.text-intro{
+	letter-spacing: 1px;
+	color:black;
+	margin-top:1rem;
+	margin-bottom:1rem;
+	text-align:justify;
+	font-size:1rem;
+}
+
+.text{
+	letter-spacing: 1px;
+	color:black;
+	margin-top:1rem;
+	margin-bottom:1rem;
+	text-align:justify;
+	font-size:1.2rem;
+}
+
+.rouge{
+	color:red;
+	font-weight: bold;
+}
+
+.actualite{
+	padding-top:2rem;
+	margin-right:auto;
+	margin-left:0;
+	width: 100%;
+	margin-bottom:1rem;
+}
+
+.actualite-img{
+	display: block;
+	width: 40%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1rem;
+}
+
+.twitch-img{
+	width: 100%;
+	display: block;
+}
+
+.leak-img{
+	width: 70%;
+	display: block;
+	margin-right:auto;
+	margin-left:auto;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+.actlualites{
+	border-bottom: 2px solid black;
+}
+
+/* vidéos 
+****************************************/
+
+iframe{
+	width: 100%;
+	height:auto;
+}
+
+.videos{
+	display:flex;
+	height:15rem;
+	background-color:white;
+	padding-right:1rem;
+	box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+
+}
+
+.video{
+	display:block;
+	margin-top:auto;
+	margin-bottom:auto;
+	padding-left:1rem;
+}
+
+/*ARTICLE
+***********************************/
+.article{
+	display:block;
+	flex-basis:33%;
+	margin-left:2rem;
+}
+
+.articles{
+	margin-top:2rem;
+	display:flex;
+	margin-left:-2rem;
+	padding-bottom:2rem;
+}
+
+.text-article{
+	padding-top:2rem;
+	padding-bottom:1rem;
+	font-size:1rem;
+	color:#696969;
+}
+
+.text-article-intro{
+	padding-top:1rem;
+	font-size:1rem;
+	letter-spacing: 0.7px;
+	color:black;
+	font-family: 'Bitter','Segoe UI',Roboto,Helvetica,Arial,serif;
+}
+
+.suite{
+ float:right;
+	color:black;
+	
+}
+
+/*aside
+********************************/
+.aside{
+	display:block;
+	flex-basis:25%;
+	width: auto;
+	flex-wrap: wrap;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:2rem;
+}
+
+.lien-pub{
+	display:flex;
+	padding-top:1.5rem;
+	padding-bottom:1rem;
+	font-size:1.5rem;
+} 
+
+.lien-pub1:before{
+	content:''; 
+	display: inline-block;
+	background: transparent url(riot.jpg) center no-repeat;
+	width: 2rem;
+	height:2rem; 
+	background-size: contain;
+	margin-left:1rem;
+	margin-right:1rem;
+} 
+
+.lien-pub2:before{
+	content:''; 
+	display: inline-block;
+	background: transparent url(epic.png) center no-repeat;
+	width: 2rem;
+	height:2rem; 
+	background-size: contain;
+	margin-left:1rem;
+	margin-right:4rem;
+} 
+
+.lien-pub3:before{
+	content:''; 
+	display: inline-block;
+	background: transparent url(ez.png) center no-repeat;
+	width: 2rem;
+	height:2rem; 
+	background-size: contain;
+	margin-left:1rem;
+	margin-right:1rem;
+} 
+
+.pub{
+	box-sizing: content-box;
+	width: auto;
+	height:18rem; 
+	display:block;
+	margin-top:2rem;
+	background-color:white;
+}
+
+.text-pub{
+	margin-top:1rem;
+	font-size:1.1rem;
+	color:blue;
+	text-align:center;
+}
+
+.text-pub>a{
+	color:blue;
+}
+
+.pub-img{
+	width: 80%;
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.pub2{
+	width: auto;
+	height:8rem; 
+	display:block;
+	margin-top:2rem;
+	background-color:white;
+}
+
+.img-pub{
+	display:flex;
+	background-color:white;
+	padding-right:1rem;
+}
+
+.titre-pub{
+	display:block;
+	color:blue;
+	margin-top:3.5rem;
+	margin-left:1rem;
+	text-align:center;
+	font-size:1rem;
+}
+
+.img-pub:before{
+	content:"";
+	display: inline-block; 
+	width: 8rem; 
+	height: 5rem; 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: 10rem; 
+	margin-top:2rem;
+	margin-left:1rem;
+	margin-bottom:2rem;
+}
+
+.img-pub1:before{
+	background-image: url(play.jpg);
+}
+
+.img-pub2:before{
+	background-image: url(genshin.jpg);
+}
+
+.img-pub3:before{
+	background-image: url(acti.jpg);
+}
+
+.img-pub4:before{
+	background-image: url(lfl.jpg);
+}
+
+/*footer
+******************************/
+.footer{
+	background-image: url(fond.gif);
+	background-repeat: no-repeat;
+	background-size: 100rem ;
+}
+
+.reseaux{
+	width: auto;
+	height:5rem; 
+	display:flex;
+	margin-top:1rem;
+}
+
+.reseau{
+	display:flex;
+}
+
+.reseau:before{
+	content:"";
+	display: inline-block; 
+	width: 2rem; 
+	height: 2rem; 
+	background-repeat: no-repeat; 
+	background-position: center; 
+	background-size: 2rem; 
+	margin-top:1.5rem;
+	margin-left:1rem;
+}
+
+.reseau1:before{
+	background-image: url(web.png);
+}
+
+.reseau2:before{
+	background-image: url(inst.png);
+}
+.reseau3:before{
+	background-image: url(face.png);
+}
+
+
+/* RESOLUTION 800px/50rem
+****************************************/
+@media screen and (max-width: 50rem){
+.aside{display:none;}
+.contenue {flex-basis:100%; margin-right:1rem; margin-left:1rem;}
+.menu-sticky{ bottom: 0rem; top: auto; width: 100%;  }
+.menu-sticky-item { display: flex;  flex-basis: 100%;} 
+.menu-sticky-link {border-top-left-radius: 0px; border-bottom-left-radius: 0px; background-color: #9c27b0; position: initial;  color: #fff; width: 100%; }
+.footer{margin-bottom:3rem;}
+.article{flex-basis:100%;margin-bottom:2rem;}
+.articles{display:block;margin-left:-2rem;padding-bottom:2rem;}
+}
+
+
+
+
+
+
+
+
+
+/* RESOLUTION 480px/30rem
+****************************************/
+@media screen and (max-width: 30rem){
+.aside{display:none;}
+.menu-sticky-text { display:none; }
+.menu-sticky-link { justify-content: center; padding: 0; }
+}
+
+
+
+
+
